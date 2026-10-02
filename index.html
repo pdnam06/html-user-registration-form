@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký người dùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="registration-card">
+        <header>
+            <p class="eyebrow">THÔNG TIN THÀNH VIÊN</p>
+            <h1>Đăng ký người dùng</h1>
+            <p class="description">Vui lòng điền đầy đủ thông tin vào biểu mẫu bên dưới.</p>
+        </header>
+
+        <form
+            action="http://demo.codegym.vn/6/registration_form/register.php"
+            method="POST"
+        >
+            <div class="form-field">
+                <label for="name">Họ và tên <span>*</span></label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nhập họ và tên"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email <span>*</span></label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Số điện thoại <span>*</span></label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="09xxxxxxxx"
+                    autocomplete="tel"
+                    required
+                >
+            </div>
+
+            <fieldset>
+                <legend>Giới tính <span>*</span></legend>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" name="gender" value="male" required>
+                        Nam
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Nữ
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Khác
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+
+        <p class="server-note">
+            Biểu mẫu sử dụng endpoint thực hành của CodeGym. Máy chủ mẫu có thể
+            không còn hoạt động hoặc trả về lỗi.
+        </p>
+    </main>
+</body>
+</html>
